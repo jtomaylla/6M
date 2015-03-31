@@ -1,0 +1,11 @@
+var include = '<script type="text/javascript" src="js/jquery-1.3.2.js"></script>';
+include += '<script type="text/javascript" src="js/cufon-yui.js"></script>';
+include += '<script type="text/javascript" src="js/Movistar_Headline_400.font.js"></script>';
+include += '<script type="text/javascript" src="js/commons.js"></script>';
+include += '<script type="text/javascript" src="js/jquery.ifixpng.js"></script>';
+include += '<script type="text/javascript" src="js/jquery.scrollTo-min"></script>';
+include += '<script type="text/javascript" src="js/jquery.tabs.pack.js"></script>';
+include += '<script type="text/javascript" src="js/calendar/src/js/jscal2.js"></script>';
+include += '<script type="text/javascript" src="js/calendar/src/js/lang/es.js"></script>';
+include += '<script type="text/javascript" src="js/jquery-latest.min"></script>';
+document.write(include);

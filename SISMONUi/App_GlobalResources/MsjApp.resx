@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DefaultPassword" xml:space="preserve">
+    <value>1234</value>
+  </data>
+  <data name="LabelAdd" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="LabelUpdate" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="Mail_Subject" xml:space="preserve">
+    <value>Aviso 6M</value>
+  </data>
+  <data name="MsjChagePasswordOK" xml:space="preserve">
+    <value>Su contraseña fue cambiada correctamente.</value>
+  </data>
+  <data name="MsjClosedTask" xml:space="preserve">
+    <value>Esta tarea ha sido cerrada satisfactoriamente.</value>
+  </data>
+  <data name="MsjDeleteException" xml:space="preserve">
+    <value>No se puede modificar el registro pues se encuentra relacionado.</value>
+  </data>
+  <data name="MsjDisabledUser" xml:space="preserve">
+    <value>Su usuario está deshabilitado, por favor contáctese con el administrador del sistema.</value>
+  </data>
+  <data name="MsjExistMail" xml:space="preserve">
+    <value>Esta cuenta ya se encuentra registrada.</value>
+  </data>
+  <data name="MsjInsertOK" xml:space="preserve">
+    <value>Datos registrados correctamente.</value>
+  </data>
+  <data name="MsjLevelExist" xml:space="preserve">
+    <value>Este nivel ya existe</value>
+  </data>
+  <data name="MsjLoginUserPass_1" xml:space="preserve">
+    <value>Su nombre de usuario o contraseña son incorrectos.</value>
+  </data>
+  <data name="MsjLoginUserPass_2" xml:space="preserve">
+    <value>Debe ingresar su nombre de usuario y contraseña. Por favor ingréselos e intente nuevamente.</value>
+  </data>
+  <data name="MsjLoginUserPass_3" xml:space="preserve">
+    <value>Debe ingresar su nombre de usuario. Por favor ingréselo e intente nuevamente.</value>
+  </data>
+  <data name="MsjLoginUserPass_4" xml:space="preserve">
+    <value>Debe ingresar su contraseña. Por favor ingrésela e intente nuevamente.</value>
+  </data>
+  <data name="MsjNoNotification" xml:space="preserve">
+    <value>No tiene ninguna notificación.</value>
+  </data>
+  <data name="MsjNoProfile" xml:space="preserve">
+    <value>No tiene ningun perfil asociado, por favor contáctese con el administrador del sistema.</value>
+  </data>
+  <data name="MsjPasswordReset" xml:space="preserve">
+    <value>Se ha reseteado al usuario.</value>
+  </data>
+  <data name="MsjRequiredDocs" xml:space="preserve">
+    <value>Debe adjuntar todos los documentos requeridos para poder cerrar esta tarea.</value>
+  </data>
+  <data name="MsjRequiredFinal_Cost" xml:space="preserve">
+    <value>Debe ingresar un costo final mayor a cero.</value>
+  </data>
+  <data name="MsjUpdateOK" xml:space="preserve">
+    <value>Datos actualizados correctamente.</value>
+  </data>
+  <data name="MsjYouHaveMessage" xml:space="preserve">
+    <value>Ud. tiene {0} notificaciones.</value>
+  </data>
+  <data name="NoRecordGrid" xml:space="preserve">
+    <value>No se encontraron registros</value>
+  </data>
+  <data name="NotificationMessageExcess" xml:space="preserve">
+    <value>Se está gastando mas del {0}% a {1} dias de iniciada la tarea {2} del proyecto </value>
+  </data>
+  <data name="NotificationMessageSaving" xml:space="preserve">
+    <value>Se está gastando menos del {0}% a {1} dias de iniciada la tarea {2} del proyecto </value>
+  </data>
+  <data name="NotificationTypeExcess" xml:space="preserve">
+    <value>EXCESO</value>
+  </data>
+  <data name="NotificationTypeSaving" xml:space="preserve">
+    <value>AHORRO</value>
+  </data>
+  <data name="PATH_DOWNLOAD_FILE" xml:space="preserve">
+    <value>~/FileDownload.aspx?FileName={0}&amp;Dir={1}</value>
+  </data>
+  <data name="SeleccionaCombo" xml:space="preserve">
+    <value>Selecciona un item.</value>
+  </data>
+  <data name="TextUserAdmin" xml:space="preserve">
+    <value>Super-Administrador</value>
+  </data>
+  <data name="Title6M" xml:space="preserve">
+    <value>6M</value>
+  </data>
+  <data name="Title6MSecurity" xml:space="preserve">
+    <value>6M - Security</value>
+  </data>
+  <data name="TitleConfirm" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="UserNoExist" xml:space="preserve">
+    <value>Usuario o password incorrectos. O su usuario ha sido deshabilitado.</value>
+  </data>
+</root>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2CA8FEA-3CB2-4B3B-808D-A282BEB15039}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SISMONRules</RootNamespace>
+    <AssemblyName>SISMONEntities</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SISMONEntities.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SISMONEntities.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cooperator.Framework.Core, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SISMONData\DDLs\Cooperator.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ALERT.cs" />
+    <Compile Include="Entities\Auto\ALERT.Auto.cs" />
+    <Compile Include="Entities\Auto\COST_REPLACEMENT.Auto.cs" />
+    <Compile Include="Entities\Auto\TASK_ATTACHMENT.Auto.cs" />
+    <Compile Include="Entities\Auto\TASK_CONFIGURATION.Auto.cs" />
+    <Compile Include="Entities\COST_REPLACEMENT.cs" />
+    <Compile Include="Entities\NOTIFICATION.cs" />
+    <Compile Include="Entities\TASK_ATTACHMENT.cs" />
+    <Compile Include="Entities\TASK_CONFIGURATION.cs" />
+    <Compile Include="Objects\ALERTObject.cs" />
+    <Compile Include="Objects\Auto\ALERTObject.Auto.cs" />
+    <Compile Include="Entities\ALERT_TYPE.cs" />
+    <Compile Include="Entities\Auto\ALERT_TYPE.Auto.cs" />
+    <Compile Include="Objects\ALERT_TYPEObject.cs" />
+    <Compile Include="Objects\Auto\ALERT_TYPEObject.Auto.cs" />
+    <Compile Include="Entities\ATTACHMENT.cs" />
+    <Compile Include="Entities\Auto\ATTACHMENT.Auto.cs" />
+    <Compile Include="Objects\ATTACHMENTObject.cs" />
+    <Compile Include="Objects\Auto\ATTACHMENTObject.Auto.cs" />
+    <Compile Include="Entities\DEPENDENCY.cs" />
+    <Compile Include="Entities\Auto\DEPENDENCY.Auto.cs" />
+    <Compile Include="Objects\Auto\COST_REPLACEMENTObject.Auto.cs" />
+    <Compile Include="Objects\Auto\TASK_ATTACHMENTObject.Auto.cs" />
+    <Compile Include="Objects\Auto\TASK_CONFIGURATIONObject.Auto.cs" />
+    <Compile Include="Objects\COST_REPLACEMENTObject.cs" />
+    <Compile Include="Objects\DEPENDENCYObject.cs" />
+    <Compile Include="Objects\Auto\DEPENDENCYObject.Auto.cs" />
+    <Compile Include="Entities\MODULE.cs" />
+    <Compile Include="Entities\Auto\MODULE.Auto.cs" />
+    <Compile Include="Objects\MODULEObject.cs" />
+    <Compile Include="Objects\Auto\MODULEObject.Auto.cs" />
+    <Compile Include="Entities\ORGANIZATION.cs" />
+    <Compile Include="Entities\Auto\ORGANIZATION.Auto.cs" />
+    <Compile Include="Objects\ORGANIZATIONObject.cs" />
+    <Compile Include="Objects\Auto\ORGANIZATIONObject.Auto.cs" />
+    <Compile Include="Entities\ORGANIZATION_LEVELNAME.cs" />
+    <Compile Include="Entities\Auto\ORGANIZATION_LEVELNAME.Auto.cs" />
+    <Compile Include="Objects\ORGANIZATION_LEVELNAMEObject.cs" />
+    <Compile Include="Objects\Auto\ORGANIZATION_LEVELNAMEObject.Auto.cs" />
+    <Compile Include="Entities\PAGE.cs" />
+    <Compile Include="Entities\Auto\PAGE.Auto.cs" />
+    <Compile Include="Objects\PAGEObject.cs" />
+    <Compile Include="Objects\Auto\PAGEObject.Auto.cs" />
+    <Compile Include="Entities\PERMISSION.cs" />
+    <Compile Include="Entities\Auto\PERMISSION.Auto.cs" />
+    <Compile Include="Objects\PERMISSIONObject.cs" />
+    <Compile Include="Objects\Auto\PERMISSIONObject.Auto.cs" />
+    <Compile Include="Entities\PROFILE.cs" />
+    <Compile Include="Entities\Auto\PROFILE.Auto.cs" />
+    <Compile Include="Objects\PROFILEObject.cs" />
+    <Compile Include="Objects\Auto\PROFILEObject.Auto.cs" />
+    <Compile Include="Entities\PROFILE_PAGE.cs" />
+    <Compile Include="Entities\Auto\PROFILE_PAGE.Auto.cs" />
+    <Compile Include="Objects\PROFILE_PAGEObject.cs" />
+    <Compile Include="Objects\Auto\PROFILE_PAGEObject.Auto.cs" />
+    <Compile Include="Entities\PROJECT.cs" />
+    <Compile Include="Entities\Auto\PROJECT.Auto.cs" />
+    <Compile Include="Objects\PROJECTObject.cs" />
+    <Compile Include="Objects\Auto\PROJECTObject.Auto.cs" />
+    <Compile Include="Entities\RESOURCE.cs" />
+    <Compile Include="Entities\Auto\RESOURCE.Auto.cs" />
+    <Compile Include="Objects\RESOURCEObject.cs" />
+    <Compile Include="Objects\Auto\RESOURCEObject.Auto.cs" />
+    <Compile Include="Entities\STATUS.cs" />
+    <Compile Include="Entities\Auto\STATUS.Auto.cs" />
+    <Compile Include="Objects\STATUSObject.cs" />
+    <Compile Include="Objects\Auto\STATUSObject.Auto.cs" />
+    <Compile Include="Entities\TASK.cs" />
+    <Compile Include="Entities\Auto\TASK.Auto.cs" />
+    <Compile Include="Objects\TASKObject.cs" />
+    <Compile Include="Objects\Auto\TASKObject.Auto.cs" />
+    <Compile Include="Entities\TASK_HISTORY.cs" />
+    <Compile Include="Entities\Auto\TASK_HISTORY.Auto.cs" />
+    <Compile Include="Objects\TASK_ATTACHMENTObject.cs" />
+    <Compile Include="Objects\TASK_CONFIGURATIONObject.cs" />
+    <Compile Include="Objects\TASK_HISTORYObject.cs" />
+    <Compile Include="Objects\Auto\TASK_HISTORYObject.Auto.cs" />
+    <Compile Include="Entities\USER.cs" />
+    <Compile Include="Entities\Auto\USER.Auto.cs" />
+    <Compile Include="Objects\USERObject.cs" />
+    <Compile Include="Objects\Auto\USERObject.Auto.cs" />
+    <Compile Include="Entities\USER_PROFILE.cs" />
+    <Compile Include="Entities\Auto\USER_PROFILE.Auto.cs" />
+    <Compile Include="Objects\USER_PROFILEObject.cs" />
+    <Compile Include="Objects\Auto\USER_PROFILEObject.Auto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

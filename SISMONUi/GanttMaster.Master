@@ -1,0 +1,281 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GanttMaster.master.cs"
+    Inherits="SISMONUi.GanttMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <%= SISMONUi.Common.Code.SessionManager.Title%></title>
+    <link rel="stylesheet" type="text/css" href="<%# ResolveUrl("~/css/GeneralGantt.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%# ResolveUrl("~/css/jAlerts/jquery.alerts.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%# ResolveUrl("~/css/jbar.colors.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%# ResolveUrl("~/css/jbar.css") %>" />
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/jquery-1.11.1.min.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/jquery.alerts.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/cufon-yui.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/commons.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/jquery.tabs.pack.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/helper.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/jquery.session.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/jquery.bar.custom.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/js/helpers.js") %>'></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript">
+        var ventana = null;
+        var sw = 'false';
+        var pr = null;
+        //************************************************************************************************************//
+        function showMsgParent(title, mensage) {
+            jAlert(mensage, title);
+        }
+        //************************************************************************************************************//
+        function CierraVentana() {
+            if (ventana != null) {
+                ventana.close();
+            }
+        }
+        //************************************************************************************************************//
+
+        function ShowUserData() {
+            $("#UserTable").slideDown("fast", "linear");
+            $('#flechaAbajo').hide();
+        }
+        //************************************************************************************************************//
+        function HideUserData() {
+            $("#UserTable").slideUp("fast", "linear")
+            $('#flechaAbajo').show();
+        }
+
+        //************************************************************************************************************//
+        
+        $(document).ready(function () {
+            $('#flechaAbajo').mouseover(function () {
+                ShowUserData();
+            });
+
+            $('#UserTable').mouseover(function () {
+                ShowUserData();
+            });
+
+            $('#UserTable').mouseleave(function () {
+                HideUserData();
+            });
+        });
+
+        //************************************************************************************************************//
+
+        function showWindow(url, title, width, height, modal, pathIcon, functClose) {
+            var oWnd = $find("rwGeneral");
+            oWnd.setSize(width, height);
+            if (pathIcon != '') oWnd.set_iconUrl(pathIcon);
+            oWnd.setUrl(url);
+            oWnd.set_title(title);
+            oWnd.set_modal(modal);
+            oWnd.set_behaviors(Telerik.Web.UI.WindowBehaviors.Move + Telerik.Web.UI.WindowBehaviors.Close)
+            setTimeout(function () { oWnd.setActive(true); }, 0);
+            if (functClose != undefined) {
+                if (functClose != '') {
+                    oWnd.remove_close(functClose);
+                    oWnd.add_close(functClose);
+                }
+            }
+            oWnd.show();
+            return false;
+        }
+        //************************************************************************************************************//
+        //        function showAttachmentDoc(path, title) {
+        function showAttachmentDoc(path, title, width, height) {
+            var oWnd = $find("rwAttachment");
+            //            oWnd.setSize(800, 600);
+            oWnd.setSize(width, height);
+            oWnd.setUrl(path);
+            oWnd.set_title(title);
+            oWnd.set_modal(false);
+            oWnd.set_behaviors(Telerik.Web.UI.WindowBehaviors.Move + Telerik.Web.UI.WindowBehaviors.Close + Telerik.Web.UI.WindowBehaviors.Maximize)
+            setTimeout(function () { oWnd.setActive(true); }, 0);
+            oWnd.remove_command(OnClientCommandPDFViewer);
+            oWnd.add_command(OnClientCommandPDFViewer);
+            oWnd.remove_pageLoad(OnClientPageLoadPDFViewer);
+            oWnd.add_pageLoad(OnClientPageLoadPDFViewer);
+            oWnd.show();
+            return false;
+        }
+        //************************************************************************************************************//
+        function OnClientCommandPDFViewer(sender, eventArgs) {
+            if (eventArgs._commandName == 'Maximize' || eventArgs._commandName == 'Restore') {
+                window.setTimeout(function () {
+                    var senderElementStyle = sender.get_popupElement().style;
+                    var height = senderElementStyle.height.replace("px", "");
+                    if ($.browser.msie) height = height - 80;
+                    else if ($.browser.mozilla || $.browser.chrome || $.browser.safari) height = height - 80;
+                    sender.GetContentFrame().contentWindow.SetSizePdfViewer('99%', height);
+                }, 0);
+            }
+        }
+        //************************************************************************************************************//
+        function OnClientPageLoadPDFViewer(sender, eventArgs) {
+            var height = sender._getCurrentBounds().height;
+            if ($.browser.msie) height = height - 80;
+            else if ($.browser.mozilla || $.browser.chrome || $.browser.safari) height = height - 80;
+            sender.GetContentFrame().contentWindow.SetSizePdfViewer('99%', height);
+        }
+        //************************************************************************************************************//
+        function OnClientActivate(sender) {
+            //get a reference to the RadWindow object
+            ventana = sender;
+        }
+        //************************************************************************************************************//
+             
+    </script>
+</head>
+<body>
+    <iframe ID="KeepAliveFrame" width="0" height="0" runat="server"></iframe>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="rsmMaster" runat="server" AsyncPostBackTimeout="300">
+    </telerik:RadScriptManager>
+    <telerik:RadAjaxManager ID="RadAjaxManagerMaster" ClientIDMode="Static" runat="server">
+    </telerik:RadAjaxManager>
+    <telerik:RadSkinManager ID="RadSkinManager1" runat="server" Skin="Silk">
+    </telerik:RadSkinManager>
+    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanelMaster" Skin="Silk" ClientIDMode="Static"
+        runat="server" Transparency="10">
+    </telerik:RadAjaxLoadingPanel>
+    <div id="wrapper">
+        <div id="intwrapper">
+            <!--CABECERA-->
+            <div class="bienvenido">
+                <div class="bienvenido_left" style="width: 500px;">
+                    Bienvenido <span class="bold">
+                        <%= SISMONUi.Common.Code.SessionManager.UserNameIdentity%></span>&nbsp;|&nbsp;<asp:LinkButton
+                            ID="lnkCerrarSesion" runat="server" ValidationGroup="CerrarSesion" OnClick="lnkCerrarSesion_Click"
+                            ForeColor="White">Cerrar sesi&oacute;n</asp:LinkButton>&nbsp;| &nbsp;<asp:LinkButton
+                                ID="lnkInicio" runat="server" Text="Inicio" ForeColor="White" OnClick="lnkInicio_Click"></asp:LinkButton>&nbsp;
+                </div>
+            </div>
+            <div class="gestion_cabecera">
+                <div class="gestion_cabeceraleft">
+                    <h2>
+                        <%= SISMONUi.Common.Code.SessionManager.Title%></h2>
+                </div>
+                <div class="gestion_cabeceraright">
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <table style="float: top; z-index: 7001; top: 23px; position: absolute; left: 123px">
+                <tr>
+                    <td valign="top">
+                        <table id="UserTable" border="0px" cellpadding="5px" cellspacing="0px" style="border: 1px solid #C0C0C0;
+                            background-color: #fff; display: none; color: #000; font-size: small; font-family: Calibri;">
+                            <tr>
+                                <td valign="top">
+                                    <asp:Image ID="UserPhoto" Width="80px" Height="90px" runat="server" />
+                                </td>
+                                <td valign="top" style="padding-top: 10px">
+                                    <table cellspacing="0px" cellpadding="0px" width="100px">
+                                        <tr style="height: 20px">
+                                            <td>
+                                                <span style="font-weight: bold">Usuario</span>
+                                            </td>
+                                            <td style="width: 10px" align="center">
+                                                :
+                                            </td>
+                                            <td style="padding-left: 5px">
+                                                <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 20px">
+                                            <td>
+                                                <span style="font-weight: bold">Ap</span>
+                                            </td>
+                                            <td align="center">
+                                                :
+                                            </td>
+                                            <td style="padding-left: 5px">
+                                                <asp:Label ID="lblAp" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 20px">
+                                            <td>
+                                                <span style="font-weight: bold">Am</span>
+                                            </td>
+                                            <td align="center">
+                                                :
+                                            </td>
+                                            <td style="padding-left: 5px">
+                                                <asp:Label ID="lblAm" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 20px">
+                                            <td>
+                                                <span style="font-weight: bold">Nombre</span>
+                                            </td>
+                                            <td align="center">
+                                                :
+                                            </td>
+                                            <td style="padding-left: 5px">
+                                                <asp:Label ID="lblNombre" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 20px">
+                                            <td colspan="3" align="center">
+                                                <asp:LinkButton ID="lnkReset" runat="server" OnClick="lnkReset_Click">Cambiar contraseña</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #FFFFFF;" valign="top">
+                        <asp:Image ID="flechaAbajo" runat="server" ClientIDMode="Static" />
+                    </td>
+                </tr>
+            </table>
+            <!--FIN CABECERA-->
+            <!--CONTENIDO-->
+            <div class="contenido_wrapper">
+                <!-- menu -->
+                <div id="floating">
+                    <div id="accordionMenu">
+                        <div class="top_accordion">
+                            <img src='<%= ResolveUrl("img/top_accordion.png") %>' height="8" width="230" alt=""
+                                border="0" />
+                        </div>
+                        <telerik:RadPanelBar ID="rpbMenu" runat="server" Skin="Metro" Width="230px" ResolvedRenderMode="Classic">
+                        </telerik:RadPanelBar>
+                        <div class="bottom_accordion">
+                        </div>
+                    </div>
+                    <div id="closeOpen">
+                    </div>
+                </div>
+                <!-- fin menu -->
+                <br />
+                <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- FOOTER-->
+            <div class="footer_gestion" style="z-index: 0">
+            </div>
+            <!-- FIN FOOTER-->
+        </div>
+    </div>
+    <telerik:RadWindowManager ID="rwmMaster" Style="z-index: 10000" ShowContentDuringLoad="False"
+        VisibleStatusbar="False" runat="server" EnableShadow="True" 
+        ResolvedRenderMode="Classic" Behavior="Maximize">
+        <Windows>
+            <telerik:RadWindow ID="rwGeneral" ClientIDMode="Static" runat="server" Animation="FlyIn">
+            </telerik:RadWindow>
+            <telerik:RadWindow ID="rwAttachment" runat="server" ClientIDMode="Static" Animation="FlyIn">
+            </telerik:RadWindow>
+        </Windows>
+    </telerik:RadWindowManager>
+    </form>
+</body>
+</html>

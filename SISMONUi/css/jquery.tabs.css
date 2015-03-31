@@ -1,0 +1,47 @@
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .tabs-hide {
+        display: none;
+    }
+}
+
+@media print {
+    .tabs-nav {
+        display: none;
+    }
+}
+
+@media print {
+    .tabs-nav2 {
+        display: none;
+    }
+}
+
+@media print {
+    .tabs-nav3 {
+        display: none;
+    }
+}
+
+/******** tabs ********/
+ul.tabs-nav2{ width:700px;height:33px; margin-bottom:5px; background:url(../img/fnd_tabs_prod.gif) repeat-x left center; float:left; margin-top:10px;}
+.tabs-nav2 {list-style: none;margin: 0;padding: 0px;}
+.tabs-nav2:after { display: block;clear: both;content: " ";}
+.tabs-nav2 li {float: left;margin: 0 2px 0 1px;}
+.tabs-nav2 a, .tabs-nav2 a span {}
+.tabs-nav2 a {position: relative;top: 1px;z-index: 2;padding-left: 0;color:#0086c3 ;font-size: 12px;font-weight: bold;line-height: 1.2;text-align: center;text-decoration: none;white-space: nowrap; /* required in IE 6 */}
+.tabs-nav2 .tabs-selected a {color: #515559; background:#FFF}
+.tabs-nav2 .tabs-selected a, .tabs-nav2 a:hover, .tabs-nav2 a:focus, .tabs-nav2 a:active {background-position: 100% -150px;text-decoration:none;color: #515559;outline: 0; /* prevent dotted border in Firefox *//*width:104px;*/}
+.tabs-nav2 a, .tabs-nav2 .tabs-disabled a:hover, .tabs-nav2 .tabs-disabled a:focus, .tabs-nav2 .tabs-disabled a:active {background-position: 100% -100px;float: left}
+.tabs-nav2 a span {padding:9px 20px; float: left}
+.tabs-nav2 a span.top {padding-top:10px; height: 20px;float: left}
+
+.tabs-nav2 .tabs-selected a span {padding:9px 20px;}
+.tabs-nav2 .tabs-selected a span.top {padding-top:11px;height: 20px;float: left}
+.tabs-nav2 .tabs-selected a span, .tabs-nav2 a:hover span, .tabs-nav2 a:focus span, .tabs-nav2 a:active span {background-position: 0 -50px;}
+.tabs-nav2 a span, .tabs-nav2 .tabs-disabled a:hover span, .tabs-nav2 .tabs-disabled a:focus span, .tabs-nav2 .tabs-disabled a:active span {background-position: 0 0;}
+.tabs-nav2 .tabs-selected a:link, .tabs-nav2 .tabs-selected a:visited, .tabs-nav2 .tabs-disabled a:link, .tabs-nav2 .tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */cursor: text;text-decoration: none;float: left}
+.tabs-nav2 a:hover, .tabs-nav2 a:focus, .tabs-nav2 a:active { /* @ Opera, we need to be explicit again here now... */cursor: pointer;}
+.tabs-nav2 .tabs-disabled {/*opacity: .4;*/}
+.tabs-container2 {width: 100%; background-color:#fff; overflow:hidden; float: right;}
+
+.tabs-container2 .border{width: 220px;padding: 12px 6px 12px 0px;border-top: 1px solid #DDDDDD; float:left; background:url(../img/bg_shw_lmas.jpg) repeat-x 0 top}

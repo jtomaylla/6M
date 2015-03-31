@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C717B0EB-8D44-42FB-BCEA-3F8A25F2E385}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SISMONRules</RootNamespace>
+    <AssemblyName>SISMONData</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SISMONData.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SISMONData.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cooperator.Framework.Core, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DDLs\Cooperator.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cooperator.Framework.Data, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DDLs\Cooperator.Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Cooperator.Framework.Library, Version=1.3.2.0, Culture=neutral, PublicKeyToken=8f7f403e20325116, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DDLs\Cooperator.Framework.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gateways\Auto\COST_REPLACEMENTGateway.Auto.cs" />
+    <Compile Include="Gateways\Auto\TASK_ATTACHMENTGateway.Auto.cs" />
+    <Compile Include="Gateways\Auto\TASK_CONFIGURATIONGateway.Auto.cs" />
+    <Compile Include="Gateways\COST_REPLACEMENTGateway.cs" />
+    <Compile Include="Gateways\TASK_ATTACHMENTGateway.cs" />
+    <Compile Include="Gateways\TASK_CONFIGURATIONGateway.cs" />
+    <Compile Include="LazyProviders\DefaultLazyProvider.cs" />
+    <Compile Include="Mappers\ALERTMapper.cs" />
+    <Compile Include="Mappers\Auto\ALERTMapper.Auto.cs" />
+    <Compile Include="Gateways\ALERTGateway.cs" />
+    <Compile Include="Gateways\Auto\ALERTGateway.Auto.cs" />
+    <Compile Include="Mappers\ALERT_TYPEMapper.cs" />
+    <Compile Include="Mappers\Auto\ALERT_TYPEMapper.Auto.cs" />
+    <Compile Include="Gateways\ALERT_TYPEGateway.cs" />
+    <Compile Include="Gateways\Auto\ALERT_TYPEGateway.Auto.cs" />
+    <Compile Include="Mappers\ATTACHMENTMapper.cs" />
+    <Compile Include="Mappers\Auto\ATTACHMENTMapper.Auto.cs" />
+    <Compile Include="Gateways\ATTACHMENTGateway.cs" />
+    <Compile Include="Gateways\Auto\ATTACHMENTGateway.Auto.cs" />
+    <Compile Include="Mappers\Auto\COST_REPLACEMENTMapper.Auto.cs" />
+    <Compile Include="Mappers\Auto\TASK_ATTACHMENTMapper.Auto.cs" />
+    <Compile Include="Mappers\Auto\TASK_CONFIGURATIONMapper.Auto.cs" />
+    <Compile Include="Mappers\COST_REPLACEMENTMapper.cs" />
+    <Compile Include="Mappers\DEPENDENCYMapper.cs" />
+    <Compile Include="Mappers\Auto\DEPENDENCYMapper.Auto.cs" />
+    <Compile Include="Gateways\DEPENDENCYGateway.cs" />
+    <Compile Include="Gateways\Auto\DEPENDENCYGateway.Auto.cs" />
+    <Compile Include="Mappers\MODULEMapper.cs" />
+    <Compile Include="Mappers\Auto\MODULEMapper.Auto.cs" />
+    <Compile Include="Gateways\MODULEGateway.cs" />
+    <Compile Include="Gateways\Auto\MODULEGateway.Auto.cs" />
+    <Compile Include="Mappers\ORGANIZATIONMapper.cs" />
+    <Compile Include="Mappers\Auto\ORGANIZATIONMapper.Auto.cs" />
+    <Compile Include="Gateways\ORGANIZATIONGateway.cs" />
+    <Compile Include="Gateways\Auto\ORGANIZATIONGateway.Auto.cs" />
+    <Compile Include="Mappers\ORGANIZATION_LEVELNAMEMapper.cs" />
+    <Compile Include="Mappers\Auto\ORGANIZATION_LEVELNAMEMapper.Auto.cs" />
+    <Compile Include="Gateways\ORGANIZATION_LEVELNAMEGateway.cs" />
+    <Compile Include="Gateways\Auto\ORGANIZATION_LEVELNAMEGateway.Auto.cs" />
+    <Compile Include="Mappers\PAGEMapper.cs" />
+    <Compile Include="Mappers\Auto\PAGEMapper.Auto.cs" />
+    <Compile Include="Gateways\PAGEGateway.cs" />
+    <Compile Include="Gateways\Auto\PAGEGateway.Auto.cs" />
+    <Compile Include="Mappers\PERMISSIONMapper.cs" />
+    <Compile Include="Mappers\Auto\PERMISSIONMapper.Auto.cs" />
+    <Compile Include="Gateways\PERMISSIONGateway.cs" />
+    <Compile Include="Gateways\Auto\PERMISSIONGateway.Auto.cs" />
+    <Compile Include="Mappers\PROFILEMapper.cs" />
+    <Compile Include="Mappers\Auto\PROFILEMapper.Auto.cs" />
+    <Compile Include="Gateways\PROFILEGateway.cs" />
+    <Compile Include="Gateways\Auto\PROFILEGateway.Auto.cs" />
+    <Compile Include="Mappers\PROFILE_PAGEMapper.cs" />
+    <Compile Include="Mappers\Auto\PROFILE_PAGEMapper.Auto.cs" />
+    <Compile Include="Gateways\PROFILE_PAGEGateway.cs" />
+    <Compile Include="Gateways\Auto\PROFILE_PAGEGateway.Auto.cs" />
+    <Compile Include="Mappers\PROJECTMapper.cs" />
+    <Compile Include="Mappers\Auto\PROJECTMapper.Auto.cs" />
+    <Compile Include="Gateways\PROJECTGateway.cs" />
+    <Compile Include="Gateways\Auto\PROJECTGateway.Auto.cs" />
+    <Compile Include="Mappers\RESOURCEMapper.cs" />
+    <Compile Include="Mappers\Auto\RESOURCEMapper.Auto.cs" />
+    <Compile Include="Gateways\RESOURCEGateway.cs" />
+    <Compile Include="Gateways\Auto\RESOURCEGateway.Auto.cs" />
+    <Compile Include="Mappers\STATUSMapper.cs" />
+    <Compile Include="Mappers\Auto\STATUSMapper.Auto.cs" />
+    <Compile Include="Gateways\STATUSGateway.cs" />
+    <Compile Include="Gateways\Auto\STATUSGateway.Auto.cs" />
+    <Compile Include="Mappers\TASKMapper.cs" />
+    <Compile Include="Mappers\Auto\TASKMapper.Auto.cs" />
+    <Compile Include="Gateways\TASKGateway.cs" />
+    <Compile Include="Gateways\Auto\TASKGateway.Auto.cs" />
+    <Compile Include="Mappers\TASK_ATTACHMENTMapper.cs" />
+    <Compile Include="Mappers\TASK_CONFIGURATIONMapper.cs" />
+    <Compile Include="Mappers\TASK_HISTORYMapper.cs" />
+    <Compile Include="Mappers\Auto\TASK_HISTORYMapper.Auto.cs" />
+    <Compile Include="Gateways\TASK_HISTORYGateway.cs" />
+    <Compile Include="Gateways\Auto\TASK_HISTORYGateway.Auto.cs" />
+    <Compile Include="Mappers\USERMapper.cs" />
+    <Compile Include="Mappers\Auto\USERMapper.Auto.cs" />
+    <Compile Include="Gateways\USERGateway.cs" />
+    <Compile Include="Gateways\Auto\USERGateway.Auto.cs" />
+    <Compile Include="Mappers\USER_PROFILEMapper.cs" />
+    <Compile Include="Mappers\Auto\USER_PROFILEMapper.Auto.cs" />
+    <Compile Include="Gateways\USER_PROFILEGateway.cs" />
+    <Compile Include="Gateways\Auto\USER_PROFILEGateway.Auto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SISMONEntities\SISMONEntities.csproj">
+      <Project>{e2ca8fea-3cb2-4b3b-808d-a282beb15039}</Project>
+      <Name>
+        SISMONEntities
+      </Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DDLs\Cooperator.Framework.Core.dll" />
+    <Content Include="DDLs\Cooperator.Framework.Data.dll" />
+    <Content Include="DDLs\Cooperator.Framework.Library.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\SISMON.Coop" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

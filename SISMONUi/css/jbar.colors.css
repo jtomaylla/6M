@@ -1,0 +1,9 @@
+.notification
+{
+	background-color: #05F745;
+}
+
+.notification.warning
+{
+	background-color: #F20909;
+}

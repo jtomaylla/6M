@@ -1,0 +1,5 @@
+Servidor: 54.85.137.4
+
+credenciales:
+ User: user_cs
+ pwd:Pa$$w0rd

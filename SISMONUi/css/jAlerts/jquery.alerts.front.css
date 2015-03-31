@@ -1,0 +1,82 @@
+#popup_container, .popup_container {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	min-width: 300px; /* Dialog will be no smaller than this */
+	max-width: 600px; /* Dialog will wrap after this width */
+	_width: 400px !important; /* IE6 */
+	background: #FFF;
+	border: solid 1px #004262;
+	color: #000;
+}
+
+#popup_title, .popup_title {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.75em;
+	color: #FFF;
+	background: #206282;
+	border: none;
+	border-bottom: solid 1px #999;
+	cursor: default;
+	padding: 0em;
+	margin: 0em;
+}
+
+#popup_content {
+	background: 16px 16px no-repeat url(images/info.gif);
+	margin: 0em;
+	padding: 13px 13px 13px 53px;
+}
+
+#popup_content.alert {
+	background-image: url(../../Images/generales/image/ico_error.jpg);
+	background-position: 30px 30px;
+	background-repeat: no-repeat;
+}
+
+#popup_content.confirm {
+	background-image: url(images/important.gif);
+}
+
+#popup_content.prompt {
+	background-image: url(images/help.gif);
+}
+
+#popup_ok {
+	background: url(../../Images/generales/image/btn_aceptar.jpg);
+	color: Transparent;
+	height: 31px;
+	width: 78px;
+	border: none;
+}
+
+#popup_message {
+	text-align: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	height: auto;
+	padding-left: 42px;
+	padding-top: 15px;
+	width: auto;
+}
+
+#popup_message  li{
+	list-style-type: disc;
+	list-style-position: inside;
+	text-align: left;
+}
+
+#popup_panel {
+	text-align: center;
+	margin: 30px auto 10px;
+	padding-right: 30px;
+}
+
+#popup_prompt {
+	margin: .5em 0em;
+}
+
+.noCombos select {
+	visibility: hidden;
+}
