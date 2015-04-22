@@ -76,10 +76,10 @@ namespace SISMONUi
 
         private void ValidLogin()
         {
-            //Codigo para reiniciar manualmente la contraseña de un usuario
+            ////Codigo para reiniciar manualmente la contraseña de un usuario
             //UpdateUser();
             //return;
-            //Fin Codigo para reiniciar manualmente la contraseña de un usuario
+            ////Fin Codigo para reiniciar manualmente la contraseña de un usuario
 
             if (RuleUser.ValidUser(txtUsuario.Text.Trim(), txtContrasena.Text.Trim()))
             {
